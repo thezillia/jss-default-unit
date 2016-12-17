@@ -1,3 +1,7 @@
+## 5.0.1 / 2016-12-17
+
+- added background-position
+
 ## 5.0.0 / 2016-12-09
 
 - update jss to 6.0
