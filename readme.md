@@ -6,26 +6,28 @@ Make sure you read [how to use
 plugins](https://github.com/cssinjs/jss/blob/master/docs/setup.md#setup-with-plugins)
 in general.
 
-[Demo](http://cssinjs.github.io/examples/index.html#plugin-jss-default-unit) -
-[JSS](https://github.com/cssinjs/jss)
+[Demo](http://cssinjs.github.io/examples/index.html#plugin-jss-default-unit)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/cssinjs/lobby)
 
-## Usage example
+## Setup
 
 ```javascript
 import jss from 'jss'
 import defaultUnit from 'jss-default-unit'
 
-// Optionally customize default units.
+// Optionally you can customize default units.
 const options = {
   'line-height': 'rem',
   'font-size': 'rem'
 }
 
 jss.use(defaultUnit(options))
+```
 
-// Define styles.
+## Usage example
+
+```javascript
 const styles = {
   container: {
     'line-height': 3,
@@ -34,16 +36,12 @@ const styles = {
     'z-index': 1
   }
 }
-
-let sheet = jss.createStyleSheet(styles)
-
-console.log(sheet.toString())
 ```
 
-Generates the following stylesheet:
+Compiles to:
 
 ```css
-.container-0-0 {
+.container-sdf345 {
   line-height: 3rem;
   font-size: 1.7rem;
   height: 200px;
