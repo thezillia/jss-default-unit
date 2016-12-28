@@ -25,7 +25,7 @@ const options = {
 jss.use(defaultUnit(options))
 ```
 
-## Usage example
+## Example
 
 ```javascript
 const styles = {
