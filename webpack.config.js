@@ -25,7 +25,7 @@ if (isProd) {
 
 module.exports = {
   output: {
-    library: 'reactJss',
+    library: 'jssDefaultUnit',
     libraryTarget: 'umd'
   },
   plugins,

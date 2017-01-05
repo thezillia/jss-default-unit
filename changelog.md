@@ -1,3 +1,7 @@
+## 5.0.2 / 2017-01-05
+
+- fix dist namespace
+
 ## 5.0.1 / 2016-12-17
 
 - added background-position
