@@ -1,14 +1,12 @@
 # JSS plugin that adds units to numeric values
 
+[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/cssinjs/lobby)
+
 Provide plain numeric values in your JSS style definitions, and the plugin will insert the apposite units. Defaults to `px` for sizes, `ms` for durations, and `%` for transform origins, and these can be customized easily (see Usage Example).
 
 Make sure you read [how to use
 plugins](https://github.com/cssinjs/jss/blob/master/docs/setup.md#setup-with-plugins)
 in general.
-
-[Demo](http://cssinjs.github.io/examples/index.html#plugin-jss-default-unit)
-
-[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/cssinjs/lobby)
 
 ## Setup
 
@@ -48,6 +46,10 @@ Compiles to:
   z-index: 1;
 }
 ```
+
+## Demo
+
+[Simple](http://cssinjs.github.io/examples/plugins/jss-default-unit/simple/index.html)
 
 ## Issues
 
