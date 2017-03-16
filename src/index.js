@@ -77,11 +77,12 @@ function addUnit(prop, value, options) {
  * @api public
  */
 export default function defaultUnit(options = {}) {
+  const camelCasedOptions = addCamelCasedVersion(options)
   return (rule) => {
     const {style, type} = rule
     if (!style || type !== 'regular') return
     for (const prop in style) {
-      style[prop] = iterate(prop, style[prop], addCamelCasedVersion(options))
+      style[prop] = iterate(prop, style[prop], camelCasedOptions)
     }
   }
 }
