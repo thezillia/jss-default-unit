@@ -1,6 +1,7 @@
 /**
  * Generated jss-default-unit CSS property units
- * @object
+ *
+ * @type object
  */
 export default {
   'animation-delay': 'ms',
@@ -33,16 +34,11 @@ export default {
   'border-vertical-spacing': 'px',
   bottom: 'px',
   'box-shadow': 'px',
-  'box-shadow-x': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
-  'box-shadow-y': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
-  'box-shadow-blur': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
-  'box-shadow-spread': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
   'column-gap': 'px',
   'column-rule': 'px',
   'column-rule-width': 'px',
   'column-width': 'px',
   'flex-basis': 'px',
-  'font-line-height': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
   'font-size': 'px',
   'font-size-delta': 'px',
   height: 'px',
@@ -91,9 +87,6 @@ export default {
   'shape-margin': 'px',
   size: 'px',
   'text-indent': 'px',
-  'text-shadow-x': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
-  'text-shadow-y': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
-  'text-shadow-blur': 'px', // Not existing property. Used to avoid issues with jss-expand intergration
   'text-stroke': 'px',
   'text-stroke-width': 'px',
   top: 'px',
@@ -105,5 +98,15 @@ export default {
   'transition-duration': 'ms',
   'vertical-align': 'px',
   width: 'px',
-  'word-spacing': 'px'
+  'word-spacing': 'px',
+  // Not existing properties.
+  // Used to avoid issues with jss-expand intergration.
+  'box-shadow-x': 'px',
+  'box-shadow-y': 'px',
+  'box-shadow-blur': 'px',
+  'box-shadow-spread': 'px',
+  'font-line-height': 'px',
+  'text-shadow-x': 'px',
+  'text-shadow-y': 'px',
+  'text-shadow-blur': 'px'
 }
