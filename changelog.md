@@ -1,3 +1,7 @@
+## 5.0.3 / 2017-03-17
+
+- internal optimizations
+
 ## 5.0.2 / 2017-01-05
 
 - fix dist namespace
