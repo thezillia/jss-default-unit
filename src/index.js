@@ -78,11 +78,16 @@ function addUnit(prop, value, options) {
  */
 export default function defaultUnit(options = {}) {
   const camelCasedOptions = addCamelCasedVersion(options)
-  return (rule) => {
-    const {style, type} = rule
-    if (!style || type !== 'regular') return
+
+  function onProcessStyle(style, rule) {
+    if (rule.type !== 'regular') return style
+
     for (const prop in style) {
       style[prop] = iterate(prop, style[prop], camelCasedOptions)
     }
+
+    return style
   }
+
+  return {onProcessStyle}
 }
