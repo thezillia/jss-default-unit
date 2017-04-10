@@ -1,3 +1,7 @@
+## 6.0.0 / 2017-04-10
+
+- support jss 7.0
+
 ## 5.0.3 / 2017-03-17
 
 - internal optimizations
