@@ -90,7 +90,7 @@ export default function defaultUnit(options = {}) {
     return style
   }
 
-  function onChangeValue(value, prop) { 
+  function onChangeValue(value, prop) {
     return iterate(prop, value, camelCasedOptions)
   }
 
