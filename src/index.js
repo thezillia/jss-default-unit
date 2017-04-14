@@ -28,6 +28,7 @@ function iterate(prop, value, options) {
   if (!value) return value
 
   let convertedValue = value
+
   switch (value.constructor) {
     case Object:
       if (prop === 'fallbacks') {
@@ -89,5 +90,9 @@ export default function defaultUnit(options = {}) {
     return style
   }
 
-  return {onProcessStyle}
+  function onChangeValue(value, prop) { 
+    return iterate(prop, value, camelCasedOptions)
+  }
+
+  return {onProcessStyle, onChangeValue}
 }

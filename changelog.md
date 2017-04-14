@@ -1,3 +1,7 @@
+## 6.1.0 / 2017-04-14
+
+- support function values
+
 ## 6.0.0 / 2017-04-10
 
 - support jss 7.0

@@ -1,6 +1,7 @@
 import expect from 'expect.js'
 import expand from 'jss-expand'
 import {create} from 'jss'
+import {stripIndent} from 'common-tags'
 
 import defaultUnit from './index'
 
@@ -392,6 +393,27 @@ describe('jss-default-unit', () => {
         '  borderBottom: 10pc;\n' +
         '}'
       )
+    })
+  })
+
+  describe('support function values', () => {
+    let sheet
+
+    beforeEach(() => {
+      sheet = jss.createStyleSheet({
+        a: {
+          width: () => 1
+        }
+      })
+      sheet.update()
+    })
+
+    it('should add default unit', () => {
+      expect(sheet.toString()).to.be(stripIndent`
+        .a-id {
+          width: 1px;
+        }
+      `)
     })
   })
 })
