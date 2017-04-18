@@ -1,3 +1,7 @@
+## 6.1.1 / 2017-04-18
+
+- update jss-expand dev dep
+
 ## 6.1.0 / 2017-04-14
 
 - support function values
