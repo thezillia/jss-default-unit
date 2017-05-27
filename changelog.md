@@ -1,3 +1,7 @@
+## 6.1.2 / 2017-05-28
+
+- fixed support of objects created by Object.create(null)
+
 ## 6.1.1 / 2017-04-18
 
 - update jss-expand dev dep
