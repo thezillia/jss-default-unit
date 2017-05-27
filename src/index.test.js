@@ -263,16 +263,16 @@ describe('jss-default-unit', () => {
     let sheet
 
     beforeEach(() => {
-      const localJss = create(settings).use(defaultUnit(), expand())
+      const localJss = create(settings).use(defaultUnit())
       sheet = localJss.createStyleSheet({
         a: {
-          padding: 0,
+          padding: 1,
           fallbacks: {
             padding: 5
           }
         },
         b: {
-          padding: 0,
+          padding: 1,
           fallbacks: [
             {padding: 5},
             {padding: 10}
@@ -290,12 +290,12 @@ describe('jss-default-unit', () => {
       expect(sheet.toString()).to.be(
         '.a-id {\n' +
         '  padding: 5px;\n' +
-        '  padding: 0;\n' +
+        '  padding: 1px;\n' +
         '}\n' +
         '.b-id {\n' +
         '  padding: 5px;\n' +
         '  padding: 10px;\n' +
-        '  padding: 0;\n' +
+        '  padding: 1px;\n' +
         '}'
       )
     })

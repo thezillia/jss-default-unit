@@ -29,8 +29,11 @@ function iterate(prop, value, options) {
 
   let convertedValue = value
 
-  switch (value.constructor) {
-    case Object:
+  let type = typeof value
+  if (type === 'object' && Array.isArray(value)) type = 'array'
+
+  switch (type) {
+    case 'object':
       if (prop === 'fallbacks') {
         for (const innerProp in value) {
           value[innerProp] = iterate(innerProp, value[innerProp], options)
@@ -41,34 +44,21 @@ function iterate(prop, value, options) {
         value[innerProp] = iterate(`${prop}-${innerProp}`, value[innerProp], options)
       }
       break
-    case Array:
+    case 'array':
       for (let i = 0; i < value.length; i++) {
         value[i] = iterate(prop, value[i], options)
       }
       break
-    case Number:
-      convertedValue = addUnit(prop, value, options)
+    case 'number':
+      if (value !== 0) {
+        convertedValue = value + (options[prop] || units[prop] || '')
+      }
       break
     default:
       break
   }
 
   return convertedValue
-}
-
-/**
- * Check if default unit must be added
- *
- * @param {String} current property
- * @param {(Object|Array|Number|String)} property value
- * @param {Object} options
- * @return {String} string with units
- */
-function addUnit(prop, value, options) {
-  if (typeof value === 'number' && value !== 0) {
-    value += options[prop] || units[prop] || ''
-  }
-  return value
 }
 
 /**
