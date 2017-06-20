@@ -6,7 +6,7 @@ import {stripIndent} from 'common-tags'
 import defaultUnit from './index'
 
 const settings = {
-  generateClassName: rule => `${rule.name}-id`
+  createGenerateClassName: () => rule => `${rule.key}-id`
 }
 
 describe('jss-default-unit', () => {

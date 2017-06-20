@@ -63,15 +63,12 @@ function iterate(prop, value, options) {
 
 /**
  * Add unit to numeric values.
- *
- * @param {Rule} rule
- * @api public
  */
 export default function defaultUnit(options = {}) {
   const camelCasedOptions = addCamelCasedVersion(options)
 
   function onProcessStyle(style, rule) {
-    if (rule.type !== 'regular') return style
+    if (rule.type !== 'style') return style
 
     for (const prop in style) {
       style[prop] = iterate(prop, style[prop], camelCasedOptions)
