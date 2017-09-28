@@ -2,6 +2,7 @@ import expect from 'expect.js'
 import expand from 'jss-expand'
 import {create} from 'jss'
 import {stripIndent} from 'common-tags'
+import Observable from 'zen-observable'
 
 import defaultUnit from './index'
 
@@ -406,6 +407,28 @@ describe('jss-default-unit', () => {
         }
       })
       sheet.update()
+    })
+
+    it('should add default unit', () => {
+      expect(sheet.toString()).to.be(stripIndent`
+        .a-id {
+          width: 1px;
+        }
+      `)
+    })
+  })
+
+  describe('support observable values', () => {
+    let sheet
+
+    beforeEach(() => {
+      sheet = jss.createStyleSheet({
+        a: {
+          width: new Observable((observer) => {
+            observer.next(1)
+          })
+        }
+      })
     })
 
     it('should add default unit', () => {
