@@ -424,7 +424,7 @@ describe('jss-default-unit', () => {
     beforeEach(() => {
       sheet = jss.createStyleSheet({
         a: {
-          width: new Observable((observer) => {
+          width: new Observable((observer) => {
             observer.next(1)
           })
         }
