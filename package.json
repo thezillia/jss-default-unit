@@ -88,7 +88,5 @@
     ]
   },
   "pre-commit": "lint:staged",
-  "dependencies": {
-    "is-observable": "^0.2.0"
-  }
+  "dependencies": {}
 }
