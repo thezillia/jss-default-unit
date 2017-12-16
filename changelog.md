@@ -1,3 +1,7 @@
+## 8.0.2 / 2017-12-16
+
+- remove is-observable
+
 ## 8.0.1 / 2017-12-16
 
 - remove is-observable

@@ -1,4 +1,3 @@
-import isObservable from 'is-observable'
 import defaultUnits from './defaultUnits'
 
 /**
@@ -31,10 +30,7 @@ function iterate(prop, value, options) {
   let convertedValue = value
 
   let type = typeof value
-  if (type === 'object') {
-    if (Array.isArray(value)) type = 'array'
-    if (isObservable(value)) type = 'observable'
-  }
+  if (type === 'object' && Array.isArray(value)) type = 'array'
 
   switch (type) {
     case 'object':
